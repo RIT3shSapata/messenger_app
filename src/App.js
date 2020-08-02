@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Button, FormControl, InputLabel, Input } from '@material-ui/core';
 import './App.css';
 import Message from './Message';
+import db from '../firebse';
 
 function App() {
   const [input, setInput] = useState('');
@@ -14,6 +15,10 @@ function App() {
   useEffect(() => {
       setUsername(prompt('Please enter your name'));
   },[])
+
+  useEffect(() => {
+    db.collection('messsages').onSnapshot()
+  }, [])
 
   const sendMessage = (event) => {
     event.preventDefault();
