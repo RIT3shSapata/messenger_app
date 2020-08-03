@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 
-const firebaseApp = firebse.initializeApp({
+const firebaseApp = firebase.initializeApp({
     apiKey: "AIzaSyDv8QbBSOutIzZrY33WWXphDM94zhZuH18",
     authDomain: "messenger-app-a6abc.firebaseapp.com",
     databaseURL: "https://messenger-app-a6abc.firebaseio.com",
